@@ -14,7 +14,7 @@ namespace Test_Application.Controllers
     {
         public ActionResult Index()
         {
-            string file = @"C:\Users\abdul\Desktop\Test Application\Test Application\Content\Lower Ground Floor.psd";
+            string file = @"C:\Users\abdul\Documents\GitHub\Test-Application\Test Application\Content\Lower Ground Floor.psd";
             using (var im = (PsdImage)Aspose.PSD.Image.Load(file, new PsdLoadOptions()))
             {
                 foreach (var layer in im.Layers)
@@ -34,7 +34,7 @@ namespace Test_Application.Controllers
                         }
                     }
                 }
-                im.Save(file,true);
+                im.Save(@"C:\Users\abdul\Documents\GitHub\Test-Application\Test Application\Content\Lower Ground Floor 2.psd", true);
             }
             return View();
         }
